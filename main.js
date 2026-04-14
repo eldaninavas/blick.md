@@ -470,13 +470,35 @@ if (registerForm) {
 
     const formData = new FormData(registerForm);
     const payload = Object.fromEntries(formData.entries());
-    console.log("Register request:", payload);
+    payload.lang = localStorage.getItem("clingio_lang") || detectLang();
 
-    if (registerMessage) {
-      const lang = localStorage.getItem("clingio_lang") || detectLang();
-      registerMessage.textContent = translations[lang]["reg.success"];
-    }
+    const btn = registerForm.querySelector("button");
+    btn.disabled = true;
+    btn.textContent = "...";
 
-    registerForm.reset();
+    fetch("https://formspree.io/f/mpqkwddj", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((r) => {
+        const lang = payload.lang;
+        if (r.ok) {
+          registerMessage.textContent = translations[lang]["reg.success"];
+          registerForm.reset();
+        } else {
+          registerMessage.textContent = "Error. Please try again.";
+          registerMessage.style.color = "#f87171";
+        }
+      })
+      .catch(() => {
+        registerMessage.textContent = "Error. Please try again.";
+        registerMessage.style.color = "#f87171";
+      })
+      .finally(() => {
+        btn.disabled = false;
+        const lang = localStorage.getItem("clingio_lang") || detectLang();
+        btn.textContent = translations[lang]["reg.submit"];
+      });
   });
 }
