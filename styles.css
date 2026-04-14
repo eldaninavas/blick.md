@@ -260,7 +260,8 @@ h3 {
   pointer-events: none;
 }
 
-.hero-blueprint {
+/* ───── Hero BIM 3D ───── */
+.hero-bim {
   position: absolute;
   right: -20px;
   top: 50%;
@@ -270,6 +271,56 @@ h3 {
   pointer-events: none;
   z-index: 0;
 }
+
+.bim-scene {
+  perspective: 800px;
+}
+
+.bim-orbit {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: bim-orbit 17s ease-in-out infinite;
+}
+
+@keyframes bim-orbit {
+  0%, 100% { transform: rotateX(45deg) rotateY(-6deg); }
+  50%      { transform: rotateX(45deg) rotateY(6deg); }
+}
+
+.bim-orbit::after {
+  content: '';
+  position: absolute;
+  inset: -5%;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.15) 0%, transparent 60%);
+  transform: translateZ(-25px);
+  pointer-events: none;
+}
+
+.hero-blueprint {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.bim-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.bim-ghost-1 {
+  transform: translateZ(40px);
+  opacity: 0.15;
+}
+
+.bim-ghost-2 {
+  transform: translateZ(80px);
+  opacity: 0.07;
+}
+
 
 /* Blueprint zones — JS-driven transitions */
 .zn {
@@ -295,6 +346,16 @@ h3 {
 
 .zn.error  { fill: #f87171; stroke: #f87171; fill-opacity: 0.14; stroke-opacity: 0.45; }
 .zl.error  { fill: #f87171; opacity: 0.35; }
+
+/* Zone depth shadows (3D extrusion illusion) */
+.zs {
+  fill-opacity: 0;
+  stroke-width: 0;
+  transition: fill-opacity 0.9s ease, fill 0.7s ease;
+}
+.zs.done  { fill: #166534; fill-opacity: 0.2; }
+.zs.warn  { fill: #78350f; fill-opacity: 0.22; }
+.zs.error { fill: #7f1d1d; fill-opacity: 0.22; }
 
 /* Worker (hard hat + hammer) */
 .worker {
@@ -933,7 +994,7 @@ h3 {
     gap: 12px;
   }
 
-  .hero-blueprint {
+  .hero-bim {
     display: none;
   }
 }

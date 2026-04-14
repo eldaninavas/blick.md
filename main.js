@@ -5,7 +5,8 @@ const translations = {
     "nav.pricing": "Precios",
     "nav.cta": "Probar gratis",
     "hero.badge": "Metallurgic · Gestión de Obras con IA",
-    "hero.title": "Cada obra, bajo control.",
+    "hero.title_1": "Cada obra,",
+    "hero.title_2": "bajo control.",
     "hero.sub": "Plataforma inteligente para equipos de construcción. Planos, materiales, equipos y reportes — un flujo, todos los roles alineados.",
     "hero.cta_primary": "Probar gratis",
     "hero.cta_secondary": "Descubrir más",
@@ -106,7 +107,8 @@ const translations = {
     "nav.pricing": "Preus",
     "nav.cta": "Provar gratis",
     "hero.badge": "Metallurgic · Gestió d'Obres amb IA",
-    "hero.title": "Cada obra, sota control.",
+    "hero.title_1": "Cada obra,",
+    "hero.title_2": "sota control.",
     "hero.sub": "Plataforma intel·ligent per a equips de construcció. Plànols, materials, equips i informes — un flux, tots els rols alineats.",
     "hero.cta_primary": "Provar gratis",
     "hero.cta_secondary": "Descobrir més",
@@ -207,7 +209,8 @@ const translations = {
     "nav.pricing": "Pricing",
     "nav.cta": "Try free",
     "hero.badge": "Metallurgic · AI-Powered Construction Management",
-    "hero.title": "Every project, under control.",
+    "hero.title_1": "Every project,",
+    "hero.title_2": "under control.",
     "hero.sub": "Intelligent platform for construction teams. Blueprints, materials, teams, and reports — one workflow, every role aligned.",
     "hero.cta_primary": "Try free",
     "hero.cta_secondary": "Learn more",
@@ -395,10 +398,9 @@ setLang(detectLang());
   let currentZone = null;
 
   function applyZone(z, s, m) {
-    const zn = document.querySelector(`.zn-${z}`);
-    const zl = document.querySelector(`.zl-${z}`);
-    if (zn) { zn.classList.remove(...states); zn.classList.add(s); }
-    if (zl) { zl.classList.remove(...states); zl.classList.add(s); }
+    document.querySelectorAll(`.zn-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
+    document.querySelectorAll(`.zl-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
+    document.querySelectorAll(`.zs-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
     if (m !== undefined) marker?.classList.toggle("visible", m);
   }
 
@@ -409,8 +411,7 @@ setLang(detectLang());
       worker.classList.remove("hammering");
       worker.style.opacity = "0";
       currentZone = null;
-      document.querySelectorAll(".zn").forEach((el) => el.classList.remove(...states));
-      document.querySelectorAll(".zl").forEach((el) => el.classList.remove(...states));
+      document.querySelectorAll(".zn, .zl, .zs").forEach((el) => el.classList.remove(...states));
       marker?.classList.remove("visible");
     } else if (step) {
       if (step.z === currentZone) {

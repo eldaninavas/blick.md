@@ -41,7 +41,47 @@
       <!-- Hero -->
       <section class="hero">
         <div class="hero-glow" aria-hidden="true"></div>
-        <svg class="hero-blueprint" aria-hidden="true" viewBox="0 0 420 340" fill="none">
+        <div class="hero-bim" aria-hidden="true">
+          <div class="bim-scene">
+            <div class="bim-orbit">
+              <!-- Ghost layer 2 (top level) -->
+              <svg class="bim-ghost bim-ghost-2" viewBox="0 0 420 340" fill="none">
+                <rect x="0" y="0" width="420" height="340" rx="4" stroke="#ef9f27" stroke-width="0.8" fill="none" stroke-dasharray="8 4"/>
+                <line x1="0" y1="85" x2="420" y2="85" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="0" y1="170" x2="420" y2="170" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="0" y1="255" x2="420" y2="255" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="105" y1="0" x2="105" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="210" y1="0" x2="210" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="315" y1="0" x2="315" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <rect x="0" y="0" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="210" y="0" width="105" height="170" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="315" y="0" width="105" height="255" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="0" y="85" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="0" y="170" width="105" height="170" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="105" y="170" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="105" y="255" width="105" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="210" y="255" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+              </svg>
+              <!-- Ghost layer 1 (mid level) -->
+              <svg class="bim-ghost bim-ghost-1" viewBox="0 0 420 340" fill="none">
+                <rect x="0" y="0" width="420" height="340" rx="4" stroke="#ef9f27" stroke-width="0.8" fill="none" stroke-dasharray="8 4"/>
+                <line x1="0" y1="85" x2="420" y2="85" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="0" y1="170" x2="420" y2="170" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="0" y1="255" x2="420" y2="255" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="105" y1="0" x2="105" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="210" y1="0" x2="210" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <line x1="315" y1="0" x2="315" y2="340" stroke="#ef9f27" stroke-width="0.4"/>
+                <rect x="0" y="0" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="210" y="0" width="105" height="170" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="315" y="0" width="105" height="255" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="0" y="85" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="0" y="170" width="105" height="170" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="105" y="170" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="105" y="255" width="105" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+                <rect x="210" y="255" width="210" height="85" rx="3" stroke="#ef9f27" stroke-width="0.5" fill="none"/>
+              </svg>
+              <!-- Main blueprint (active layer) -->
+              <svg class="hero-blueprint" viewBox="0 0 420 340" fill="none">
           <!-- Grid major -->
           <line x1="0" y1="85" x2="420" y2="85" stroke="#ef9f27" stroke-width="0.5" opacity="0.15"/>
           <line x1="0" y1="170" x2="420" y2="170" stroke="#ef9f27" stroke-width="0.5" opacity="0.15"/>
@@ -58,6 +98,17 @@
           <line x1="0" y1="127.5" x2="420" y2="127.5" stroke="#ef9f27" stroke-width="0.3" opacity="0.06"/>
           <line x1="0" y1="212.5" x2="420" y2="212.5" stroke="#ef9f27" stroke-width="0.3" opacity="0.06"/>
           <line x1="0" y1="297.5" x2="420" y2="297.5" stroke="#ef9f27" stroke-width="0.3" opacity="0.06"/>
+          <!-- Zone depth shadows (extrusion illusion) -->
+          <g class="zone-depths" transform="translate(6, 8)">
+            <rect class="zs zs-a" x="0" y="0" width="210" height="85" rx="3"/>
+            <rect class="zs zs-b" x="210" y="0" width="105" height="170" rx="3"/>
+            <rect class="zs zs-c" x="315" y="0" width="105" height="255" rx="3"/>
+            <rect class="zs zs-d" x="0" y="85" width="210" height="85" rx="3"/>
+            <rect class="zs zs-e" x="0" y="170" width="105" height="170" rx="3"/>
+            <rect class="zs zs-f" x="105" y="170" width="210" height="85" rx="3"/>
+            <rect class="zs zs-g" x="105" y="255" width="105" height="85" rx="3"/>
+            <rect class="zs zs-h" x="210" y="255" width="210" height="85" rx="3"/>
+          </g>
           <!-- 8 zones tiling full grid -->
           <rect class="zn zn-a" x="0" y="0" width="210" height="85" rx="3"/>
           <text class="zl zl-a" x="80" y="49">A-01</text>
@@ -107,10 +158,13 @@
             <line x1="256" y1="204" x2="256" y2="212" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
             <circle cx="256" cy="215.5" r="1.3" fill="#f87171"/>
           </g>
-        </svg>
+              </svg>
+            </div>
+          </div>
+        </div>
         <div class="container hero-content fade-up">
           <p class="badge" data-i18n="hero.badge">Metallurgic · Gestión de Obras con IA</p>
-          <h1 data-i18n="hero.title">Cada obra, bajo control.</h1>
+          <h1><span data-i18n="hero.title_1">Cada obra,</span><br><span data-i18n="hero.title_2">bajo control.</span></h1>
           <p class="hero-sub" data-i18n="hero.sub">
             Plataforma inteligente para equipos de construcción. Planos,
             materiales, equipos y reportes — un flujo, todos los roles alineados.
