@@ -8,6 +8,7 @@ const translations = {
     "hero.title_1": "Cada obra,",
     "hero.title_2": "bajo control.",
     "hero.sub": "Plataforma inteligente para equipos de construcción. Planos, materiales, equipos y reportes — un flujo, todos los roles alineados.",
+    "hero.dash_title": "Avance de obra",
     "hero.cta_primary": "Probar gratis",
     "hero.cta_secondary": "Descubrir más",
     "hl.ai": "IA que ahorra horas",
@@ -110,6 +111,7 @@ const translations = {
     "hero.title_1": "Cada obra,",
     "hero.title_2": "sota control.",
     "hero.sub": "Plataforma intel·ligent per a equips de construcció. Plànols, materials, equips i informes — un flux, tots els rols alineats.",
+    "hero.dash_title": "Avenç d'obra",
     "hero.cta_primary": "Provar gratis",
     "hero.cta_secondary": "Descobrir més",
     "hl.ai": "IA integrada",
@@ -212,6 +214,7 @@ const translations = {
     "hero.title_1": "Every project,",
     "hero.title_2": "under control.",
     "hero.sub": "Intelligent platform for construction teams. Blueprints, materials, teams, and reports — one workflow, every role aligned.",
+    "hero.dash_title": "Project progress",
     "hero.cta_primary": "Try free",
     "hero.cta_secondary": "Learn more",
     "hl.ai": "Built-in AI",
@@ -386,9 +389,8 @@ setLang(detectLang());
 
   // Position for worker: slightly above-right of each zone's label
   const pos = {
-    a: [140, 28], b: [280, 65], c: [387, 110],
-    d: [140, 110], e: [70, 238], f: [245, 198],
-    g: [175, 282], h: [350, 282],
+    a: [190, 78], b: [230, 98], c: [270, 118], d: [310, 138],
+    e: [150, 98], f: [190, 118], g: [230, 138], h: [270, 158],
   };
 
   const states = ["done", "warn", "error"];
@@ -397,10 +399,28 @@ setLang(detectLang());
   let i = 0;
   let currentZone = null;
 
+  const heroPct = document.getElementById("heroPct");
+  const heroFill = document.getElementById("heroFill");
+  const heroZones = document.querySelectorAll(".hz");
+  const zoneStates = {};
+
+  function updateDash() {
+    const done = Object.values(zoneStates).filter(s => s === "done").length;
+    const pct = Math.round((done / 8) * 100);
+    if (heroPct) heroPct.textContent = pct + "%";
+    if (heroFill) heroFill.style.width = pct + "%";
+    heroZones.forEach(el => {
+      const z = el.dataset.zone;
+      el.classList.remove(...states);
+      if (zoneStates[z]) el.classList.add(zoneStates[z]);
+    });
+  }
+
   function applyZone(z, s, m) {
     document.querySelectorAll(`.zn-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
     document.querySelectorAll(`.zl-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
-    document.querySelectorAll(`.zs-${z}`).forEach(el => { el.classList.remove(...states); el.classList.add(s); });
+    zoneStates[z] = s;
+    updateDash();
     if (m !== undefined) marker?.classList.toggle("visible", m);
   }
 
@@ -411,7 +431,9 @@ setLang(detectLang());
       worker.classList.remove("hammering");
       worker.style.opacity = "0";
       currentZone = null;
-      document.querySelectorAll(".zn, .zl, .zs").forEach((el) => el.classList.remove(...states));
+      document.querySelectorAll(".zn, .zl").forEach((el) => el.classList.remove(...states));
+      Object.keys(zoneStates).forEach(k => delete zoneStates[k]);
+      updateDash();
       marker?.classList.remove("visible");
     } else if (step) {
       if (step.z === currentZone) {

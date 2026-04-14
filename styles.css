@@ -263,11 +263,11 @@ h3 {
 /* ───── Hero BIM 3D ───── */
 .hero-bim {
   position: absolute;
-  right: -20px;
+  right: -30px;
   top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-  max-width: 520px;
+  transform: translateY(-52%);
+  width: 58%;
+  max-width: 680px;
   pointer-events: none;
   z-index: 0;
 }
@@ -283,8 +283,8 @@ h3 {
 }
 
 @keyframes bim-orbit {
-  0%, 100% { transform: rotateX(45deg) rotateY(-6deg); }
-  50%      { transform: rotateX(45deg) rotateY(6deg); }
+  0%, 100% { transform: rotateX(8deg) rotateY(-5deg); }
+  50%      { transform: rotateX(8deg) rotateY(5deg); }
 }
 
 .bim-orbit::after {
@@ -322,40 +322,143 @@ h3 {
 }
 
 
-/* Blueprint zones — JS-driven transitions */
-.zn {
+/* ───── Hero mini-dashboard ───── */
+.hero-dash {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  padding: 14px 16px 12px;
+  background: rgba(15, 16, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-dash-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.hero-dash-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.5);
+  animation: dash-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dash-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero-dash-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  flex: 1;
+}
+
+.hero-dash-pct {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-dash-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.hero-dash-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), #4ade80);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.hero-dash-zones {
+  display: flex;
+  gap: 4px;
+}
+
+.hz {
+  flex: 1;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 3px 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.hz.done {
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.25);
+}
+
+.hz.warn {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.hz.error {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.25);
+}
+
+/* Isometric zone faces */
+.zf-t, .zf-l, .zf-r {
   fill-opacity: 0;
   stroke-opacity: 0;
-  stroke-width: 1.2;
-  transition: fill-opacity 0.9s ease, stroke-opacity 0.9s ease, fill 0.7s ease, stroke 0.7s ease;
+  stroke-width: 0.8;
+  transition: fill-opacity 0.9s ease, fill 0.7s ease, stroke-opacity 0.9s ease, stroke 0.7s ease;
 }
 .zl {
   opacity: 0;
-  font-size: 11px;
+  font-size: 9px;
   font-family: Inter, sans-serif;
   font-weight: 600;
   transition: opacity 0.9s ease, fill 0.7s ease;
 }
 
-/* States */
-.zn.done   { fill: #4ade80; stroke: #4ade80; fill-opacity: 0.1; stroke-opacity: 0.35; }
-.zl.done   { fill: #4ade80; opacity: 0.3; }
+/* Done */
+.zn.done .zf-t { fill: #4ade80; fill-opacity: 0.15; stroke: #4ade80; stroke-opacity: 0.4; }
+.zn.done .zf-l { fill: #22c55e; fill-opacity: 0.22; stroke: #22c55e; stroke-opacity: 0.3; }
+.zn.done .zf-r { fill: #16a34a; fill-opacity: 0.28; stroke: #16a34a; stroke-opacity: 0.25; }
+.zl.done { fill: #4ade80; opacity: 0.4; }
 
-.zn.warn   { fill: #f59e0b; stroke: #f59e0b; fill-opacity: 0.12; stroke-opacity: 0.4; }
-.zl.warn   { fill: #f59e0b; opacity: 0.3; }
+/* Warn */
+.zn.warn .zf-t { fill: #f59e0b; fill-opacity: 0.18; stroke: #f59e0b; stroke-opacity: 0.4; }
+.zn.warn .zf-l { fill: #d97706; fill-opacity: 0.24; stroke: #d97706; stroke-opacity: 0.3; }
+.zn.warn .zf-r { fill: #92400e; fill-opacity: 0.3; stroke: #92400e; stroke-opacity: 0.25; }
+.zl.warn { fill: #f59e0b; opacity: 0.4; }
 
-.zn.error  { fill: #f87171; stroke: #f87171; fill-opacity: 0.14; stroke-opacity: 0.45; }
-.zl.error  { fill: #f87171; opacity: 0.35; }
-
-/* Zone depth shadows (3D extrusion illusion) */
-.zs {
-  fill-opacity: 0;
-  stroke-width: 0;
-  transition: fill-opacity 0.9s ease, fill 0.7s ease;
-}
-.zs.done  { fill: #166534; fill-opacity: 0.2; }
-.zs.warn  { fill: #78350f; fill-opacity: 0.22; }
-.zs.error { fill: #7f1d1d; fill-opacity: 0.22; }
+/* Error */
+.zn.error .zf-t { fill: #f87171; fill-opacity: 0.2; stroke: #f87171; stroke-opacity: 0.4; }
+.zn.error .zf-l { fill: #dc2626; fill-opacity: 0.26; stroke: #dc2626; stroke-opacity: 0.3; }
+.zn.error .zf-r { fill: #991b1b; fill-opacity: 0.32; stroke: #991b1b; stroke-opacity: 0.25; }
+.zl.error { fill: #f87171; opacity: 0.45; }
 
 /* Worker (hard hat + hammer) */
 .worker {
