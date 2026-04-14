@@ -301,6 +301,377 @@
         </div>
       </section>
 
+      <!-- Industries -->
+      <section id="industries" class="industries">
+        <div class="container">
+          <div class="section-header fade-up">
+            <p class="badge" data-i18n="ind.badge">Verticales</p>
+            <h2 data-i18n="ind.title">Adaptado a tu industria</h2>
+            <p class="section-sub" data-i18n="ind.subtitle">Una plataforma, múltiples verticales. Cada operación tiene su flujo.</p>
+          </div>
+          <div class="industries-grid">
+
+            <!-- Datacenters -->
+            <article class="industry-card fade-up">
+              <div class="ind-anim">
+                <svg viewBox="0 0 280 210" fill="none">
+                  <defs>
+                    <filter id="dc-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+                      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Subtle floor grid -->
+                  <line x1="30" y1="170" x2="250" y2="170" stroke="#22d3ee" stroke-width="0.3" opacity="0.06" stroke-dasharray="4 3"/>
+
+                  <!-- ===== Rack 1 (back-left) ===== -->
+                  <!-- Box -->
+                  <polygon points="82,36 106,48 82,60 58,48" fill="#0d1f35" fill-opacity="0.4" stroke="#22d3ee" stroke-width="0.5" opacity="0.35"/>
+                  <polygon points="58,48 82,60 82,128 58,116" fill="#091524" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.25"/>
+                  <polygon points="106,48 82,60 82,128 106,116" fill="#060e1a" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.15"/>
+                  <!-- Shelf dividers left -->
+                  <line x1="58" y1="65" x2="82" y2="77" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="58" y1="82" x2="82" y2="94" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="58" y1="99" x2="82" y2="111" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Shelf dividers right -->
+                  <line x1="106" y1="65" x2="82" y2="77" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="106" y1="82" x2="82" y2="94" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="106" y1="99" x2="82" y2="111" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Server panels -->
+                  <polygon points="59,49 81,61 81,76 59,64" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="59,66 81,78 81,93 59,81" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="59,83 81,95 81,110 59,98" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="59,100 81,112 81,127 59,115" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <!-- Activation overlays R1 -->
+                  <polygon points="59,100 81,112 81,127 59,115" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.04;0.06;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="59,83 81,95 81,110 59,98" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.11;0.13;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="59,66 81,78 81,93 59,81" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.18;0.20;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="59,49 81,61 81,76 59,64" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.25;0.27;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <!-- LEDs R1 -->
+                  <circle cx="63" cy="53" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="68" cy="55" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="63" cy="70" r="2" fill="#ef9f27">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="68" cy="72" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="63" cy="87" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.3s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="68" cy="89" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.9s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="63" cy="104" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="68" cy="106" r="2" fill="#f87171">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- ===== Rack 2 (center) ===== -->
+                  <!-- Box -->
+                  <polygon points="140,50 164,62 140,74 116,62" fill="#0d1f35" fill-opacity="0.4" stroke="#22d3ee" stroke-width="0.5" opacity="0.35"/>
+                  <polygon points="116,62 140,74 140,142 116,130" fill="#091524" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.25"/>
+                  <polygon points="164,62 140,74 140,142 164,130" fill="#060e1a" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.15"/>
+                  <!-- Shelf dividers left -->
+                  <line x1="116" y1="79" x2="140" y2="91" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="116" y1="96" x2="140" y2="108" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="116" y1="113" x2="140" y2="125" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Shelf dividers right -->
+                  <line x1="164" y1="79" x2="140" y2="91" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="164" y1="96" x2="140" y2="108" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="164" y1="113" x2="140" y2="125" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Server panels -->
+                  <polygon points="117,63 139,75 139,90 117,78" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="117,80 139,92 139,107 117,95" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="117,97 139,109 139,124 117,112" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="117,114 139,126 139,141 117,129" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <!-- Activation overlays R2 -->
+                  <polygon points="117,114 139,126 139,141 117,129" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.32;0.34;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="117,97 139,109 139,124 117,112" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.39;0.41;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="117,80 139,92 139,107 117,95" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.46;0.48;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="117,63 139,75 139,90 117,78" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.53;0.55;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <!-- LEDs R2 -->
+                  <circle cx="121" cy="67" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.3s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="126" cy="69" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="121" cy="84" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="126" cy="86" r="2" fill="#ef9f27">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="121" cy="101" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="126" cy="103" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="121" cy="118" r="2" fill="#ef9f27">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="126" cy="120" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.9s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- ===== Rack 3 (front-right) ===== -->
+                  <!-- Box -->
+                  <polygon points="198,64 222,76 198,88 174,76" fill="#0d1f35" fill-opacity="0.4" stroke="#22d3ee" stroke-width="0.5" opacity="0.35"/>
+                  <polygon points="174,76 198,88 198,156 174,144" fill="#091524" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.25"/>
+                  <polygon points="222,76 198,88 198,156 222,144" fill="#060e1a" fill-opacity="0.6" stroke="#22d3ee" stroke-width="0.4" opacity="0.15"/>
+                  <!-- Shelf dividers left -->
+                  <line x1="174" y1="93" x2="198" y2="105" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="174" y1="110" x2="198" y2="122" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="174" y1="127" x2="198" y2="139" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Shelf dividers right -->
+                  <line x1="222" y1="93" x2="198" y2="105" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="222" y1="110" x2="198" y2="122" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <line x1="222" y1="127" x2="198" y2="139" stroke="#22d3ee" stroke-width="0.3" opacity="0.12"/>
+                  <!-- Server panels -->
+                  <polygon points="175,77 197,89 197,104 175,92" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="175,94 197,106 197,121 175,109" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="175,111 197,123 197,138 175,126" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <polygon points="175,128 197,140 197,155 175,143" fill="#0e2a45" fill-opacity="0.5" stroke="#22d3ee" stroke-width="0.25" opacity="0.15"/>
+                  <!-- Activation overlays R3 -->
+                  <polygon points="175,128 197,140 197,155 175,143" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.60;0.62;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="175,111 197,123 197,138 175,126" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.67;0.69;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="175,94 197,106 197,121 175,109" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.74;0.76;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="175,77 197,89 197,104 175,92" fill="#22d3ee" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.81;0.83;0.85;1" dur="14s" repeatCount="indefinite"/>
+                  </polygon>
+                  <!-- LEDs R3 -->
+                  <circle cx="179" cy="81" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="184" cy="83" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="179" cy="98" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.3s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="184" cy="100" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="179" cy="115" r="2" fill="#ef9f27">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="184" cy="117" r="2" fill="#4ade80">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1.9s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="179" cy="132" r="2" fill="#22d3ee">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="184" cy="134" r="2" fill="#f87171">
+                    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="1s" begin="0s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- Progress bar -->
+                  <rect x="40" y="185" width="200" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.04"/>
+                  <rect x="40" y="185" height="5" rx="2.5" fill="#22d3ee" fill-opacity="0.3">
+                    <animate attributeName="width" values="0;17;33;50;67;83;100;117;133;150;167;183;200;200;0" dur="14s" repeatCount="indefinite"/>
+                  </rect>
+                </svg>
+              </div>
+              <h3 data-i18n="ind.dc_t">Datacenters</h3>
+              <p data-i18n="ind.dc_d">Racks, cableado, conectividad y certificaciones de instalación — todo trazado en tiempo real.</p>
+            </article>
+
+            <!-- Construction -->
+            <article class="industry-card fade-up">
+              <div class="ind-anim">
+                <svg viewBox="0 0 280 210" fill="none">
+                  <defs>
+                    <filter id="cx-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+                      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Ground reference (always visible) -->
+                  <line x1="40" y1="178" x2="240" y2="178" stroke="#4ade80" stroke-width="0.3" opacity="0.06" stroke-dasharray="4 3"/>
+
+                  <!-- Stage 1: Foundation -->
+                  <g opacity="0">
+                    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.12;0.85;1" dur="10s" repeatCount="indefinite"/>
+                    <!-- Top -->
+                    <polygon points="140,137 195,155 140,173 85,155" fill="#4ade80" fill-opacity="0.12" stroke="#4ade80" stroke-width="0.7" stroke-opacity="0.35"/>
+                    <!-- Left wall -->
+                    <polygon points="85,155 140,173 140,180 85,162" fill="#22c55e" fill-opacity="0.18" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.25"/>
+                    <!-- Right wall -->
+                    <polygon points="195,155 140,173 140,180 195,162" fill="#16a34a" fill-opacity="0.22" stroke="#16a34a" stroke-width="0.7" stroke-opacity="0.2"/>
+                  </g>
+
+                  <!-- Stage 2: Ground floor walls -->
+                  <g opacity="0">
+                    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.22;0.29;0.85;1" dur="10s" repeatCount="indefinite"/>
+                    <!-- Top face -->
+                    <polygon points="140,97 190,113 140,129 90,113" fill="#4ade80" fill-opacity="0.08" stroke="#4ade80" stroke-width="0.6" stroke-opacity="0.3"/>
+                    <!-- Left wall -->
+                    <polygon points="90,113 140,129 140,169 90,153" fill="#22c55e" fill-opacity="0.18" stroke="#22c55e" stroke-width="0.6" stroke-opacity="0.25"/>
+                    <!-- Right wall -->
+                    <polygon points="190,113 140,129 140,169 190,153" fill="#16a34a" fill-opacity="0.22" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.2"/>
+                    <!-- Windows on left wall -->
+                    <polygon points="98,120 114,126 114,134 98,128" fill="#4ade80" fill-opacity="0.06" stroke="#4ade80" stroke-width="0.3" stroke-opacity="0.15"/>
+                    <polygon points="98,138 114,144 114,152 98,146" fill="#4ade80" fill-opacity="0.06" stroke="#4ade80" stroke-width="0.3" stroke-opacity="0.15"/>
+                    <!-- Windows on right wall -->
+                    <polygon points="166,120 182,114 182,122 166,128" fill="#16a34a" fill-opacity="0.06" stroke="#16a34a" stroke-width="0.3" stroke-opacity="0.15"/>
+                    <polygon points="166,138 182,132 182,140 166,146" fill="#16a34a" fill-opacity="0.06" stroke="#16a34a" stroke-width="0.3" stroke-opacity="0.15"/>
+                    <!-- Door on left wall -->
+                    <polygon points="118,140 132,146 132,168 118,162" fill="#0a1a10" fill-opacity="0.4" stroke="#22c55e" stroke-width="0.3" stroke-opacity="0.12"/>
+                  </g>
+
+                  <!-- Stage 3: Upper floor walls (amber — in progress) -->
+                  <g opacity="0">
+                    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.42;0.49;0.85;1" dur="10s" repeatCount="indefinite"/>
+                    <!-- Top face -->
+                    <polygon points="140,65 187,80 140,95 93,80" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="0.6" stroke-opacity="0.3"/>
+                    <!-- Left wall -->
+                    <polygon points="93,80 140,95 140,127 93,112" fill="#d97706" fill-opacity="0.2" stroke="#d97706" stroke-width="0.6" stroke-opacity="0.25"/>
+                    <!-- Right wall -->
+                    <polygon points="187,80 140,95 140,127 187,112" fill="#92400e" fill-opacity="0.24" stroke="#92400e" stroke-width="0.6" stroke-opacity="0.2"/>
+                    <!-- Windows on left wall -->
+                    <polygon points="100,86 116,92 116,100 100,94" fill="#f59e0b" fill-opacity="0.06" stroke="#f59e0b" stroke-width="0.3" stroke-opacity="0.12"/>
+                    <polygon points="100,100 116,106 116,114 100,108" fill="#f59e0b" fill-opacity="0.06" stroke="#f59e0b" stroke-width="0.3" stroke-opacity="0.12"/>
+                    <!-- Windows on right wall -->
+                    <polygon points="164,86 180,80 180,88 164,94" fill="#92400e" fill-opacity="0.06" stroke="#92400e" stroke-width="0.3" stroke-opacity="0.12"/>
+                    <polygon points="164,100 180,94 180,102 164,108" fill="#92400e" fill-opacity="0.06" stroke="#92400e" stroke-width="0.3" stroke-opacity="0.12"/>
+                  </g>
+
+                  <!-- Stage 4: Roof slab -->
+                  <g opacity="0">
+                    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.58;0.65;0.85;1" dur="10s" repeatCount="indefinite"/>
+                    <!-- Top -->
+                    <polygon points="140,56 192,73 140,90 88,73" fill="#4ade80" fill-opacity="0.12" stroke="#4ade80" stroke-width="0.7" stroke-opacity="0.3"/>
+                    <!-- Left overhang -->
+                    <polygon points="88,73 140,90 140,94 88,77" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="0.6" stroke-opacity="0.2"/>
+                    <!-- Right overhang -->
+                    <polygon points="192,73 140,90 140,94 192,77" fill="#16a34a" fill-opacity="0.18" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.18"/>
+                  </g>
+
+                  <!-- Progress bar -->
+                  <rect x="65" y="192" width="150" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.04"/>
+                  <rect x="65" y="192" height="5" rx="2.5" fill="#4ade80" fill-opacity="0.35">
+                    <animate attributeName="width" values="0;0;37;37;75;75;112;112;150;150;0" keyTimes="0;0.05;0.12;0.22;0.29;0.42;0.49;0.58;0.65;0.85;1" dur="10s" repeatCount="indefinite"/>
+                  </rect>
+                </svg>
+              </div>
+              <h3 data-i18n="ind.cx_t">Obras de construcción</h3>
+              <p data-i18n="ind.cx_d">Planos, zonas, materiales y equipos coordinados desde la fundación hasta la entrega.</p>
+            </article>
+
+            <!-- Real Estate -->
+            <article class="industry-card fade-up">
+              <div class="ind-anim">
+                <svg viewBox="0 0 280 240" fill="none">
+                  <defs>
+                    <filter id="re-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+                      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Ground plane (dashed diamond yard) -->
+                  <polygon points="140,165 205,195 140,225 75,195" stroke="#a5b4fc" stroke-width="0.4" stroke-dasharray="5 4" fill="#818cf8" fill-opacity="0.03" opacity="0.15"/>
+
+                  <!-- House body -->
+                  <!-- Top face -->
+                  <polygon points="140,55 195,82 140,109 85,82" fill="#818cf8" fill-opacity="0.08" stroke="#a5b4fc" stroke-width="0.6" opacity="0.4"/>
+                  <!-- Left wall -->
+                  <polygon points="85,82 140,109 140,159 85,132" fill="#4338ca" fill-opacity="0.25" stroke="#a5b4fc" stroke-width="0.6" opacity="0.5"/>
+                  <!-- Right wall -->
+                  <polygon points="195,82 140,109 140,159 195,132" fill="#3730a3" fill-opacity="0.25" stroke="#a5b4fc" stroke-width="0.6" opacity="0.4"/>
+
+                  <!-- Roof -->
+                  <!-- Left face -->
+                  <polygon points="140,30 85,82 140,109" fill="#6366f1" fill-opacity="0.25" stroke="#a5b4fc" stroke-width="0.7" opacity="0.5"/>
+                  <!-- Right face -->
+                  <polygon points="140,30 140,109 195,82" fill="#4f46e5" fill-opacity="0.22" stroke="#a5b4fc" stroke-width="0.7" opacity="0.4"/>
+
+                  <!-- Chimney -->
+                  <polygon points="175,42 175,58 180,55 180,39" fill="#4f46e5" fill-opacity="0.4" stroke="#a5b4fc" stroke-width="0.4" opacity="0.4"/>
+                  <polygon points="180,39 180,55 185,52 185,36" fill="#4338ca" fill-opacity="0.35" stroke="#a5b4fc" stroke-width="0.4" opacity="0.3"/>
+                  <!-- Chimney smoke -->
+                  <circle cx="178" cy="35" r="2.5" fill="#a5b4fc" opacity="0.15">
+                    <animate attributeName="cy" values="35;18" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.2;0" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="r" values="2.5;5" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- Door on right wall -->
+                  <polygon points="158,128 158,152 170,146 170,122" fill="#1e1b4b" fill-opacity="0.6" stroke="#a5b4fc" stroke-width="0.5" opacity="0.35"/>
+                  <!-- Door knob -->
+                  <circle cx="161" cy="139" r="1" fill="#ef9f27" opacity="0.5"/>
+
+                  <!-- Windows on left wall -->
+                  <polygon points="94,90 94,100 112,107 112,97" fill="#fef08a" fill-opacity="0.12" stroke="#a5b4fc" stroke-width="0.4" opacity="0.3">
+                    <animate attributeName="fill-opacity" values="0.08;0.2;0.08" dur="4s" begin="0s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="94,110 94,120 112,127 112,117" fill="#fef08a" fill-opacity="0.12" stroke="#a5b4fc" stroke-width="0.4" opacity="0.3">
+                    <animate attributeName="fill-opacity" values="0.08;0.2;0.08" dur="4s" begin="2s" repeatCount="indefinite"/>
+                  </polygon>
+                  <!-- Window on right wall -->
+                  <polygon points="170,95 170,105 186,98 186,88" fill="#fef08a" fill-opacity="0.1" stroke="#a5b4fc" stroke-width="0.4" opacity="0.3">
+                    <animate attributeName="fill-opacity" values="0.06;0.18;0.06" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+                  </polygon>
+
+                  <!-- Room inspection highlights -->
+                  <polygon points="85,82 112,95 112,120 85,107" fill="#818cf8" opacity="0">
+                    <animate attributeName="opacity" values="0;0.25;0.25;0;0;0" dur="6s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="85,107 112,120 112,147 85,132" fill="#818cf8" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0.25;0.25;0;0" dur="6s" repeatCount="indefinite"/>
+                  </polygon>
+                  <polygon points="168,95 195,82 195,132 168,145" fill="#a5b4fc" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0;0.25;0.25;0" dur="6s" repeatCount="indefinite"/>
+                  </polygon>
+
+                  <!-- Inspection dot -->
+                  <circle r="4" fill="#a5b4fc" filter="url(#re-glow)">
+                    <animate attributeName="cx" values="98;98;98;180;180;98" dur="6s" repeatCount="indefinite"/>
+                    <animate attributeName="cy" values="89;115;115;110;89;89" dur="6s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.9;0.5;0.9;0.5;0.9;0.5" dur="6s" repeatCount="indefinite"/>
+                  </circle>
+                </svg>
+              </div>
+              <h3 data-i18n="ind.re_t">Inmuebles</h3>
+              <p data-i18n="ind.re_d">Inspecciones, mantenimiento y reportes de estado por piso, unidad y zona común.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
       <!-- AI Highlight -->
       <section class="ai-section">
         <div class="container ai-content fade-up">
