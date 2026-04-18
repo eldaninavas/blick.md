@@ -952,50 +952,6 @@ h3 {
   padding: 100px 0;
 }
 
-.currency-switcher {
-  display: inline-flex;
-  gap: 4px;
-  margin: 24px auto 12px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--surface);
-}
-
-.curr-btn {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  letter-spacing: 0.02em;
-}
-
-.curr-btn:hover {
-  color: var(--text);
-}
-
-.curr-btn.active {
-  background: rgba(27, 163, 154, 0.18);
-  color: var(--primary-hover);
-}
-
-.pricing-note {
-  color: var(--muted);
-  font-size: 0.85rem;
-  margin-top: 4px;
-}
-
-.pricing-note strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 .trial-banner {
   display: flex;
   align-items: center;
@@ -1055,6 +1011,19 @@ h3 {
   margin-top: 2px;
 }
 
+.price-currency {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(27, 163, 154, 0.12);
+  color: var(--primary-hover);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .price {
   font-size: 2.5rem;
   font-weight: 800;
@@ -1062,7 +1031,11 @@ h3 {
   margin-top: 16px;
 }
 
-.price span {
+.price-currency + .price {
+  margin-top: 6px;
+}
+
+.price span[data-i18n] {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--muted);

@@ -60,8 +60,6 @@ const translations = {
     "pricing.badge": "Precios",
     "pricing.title": "Paga por obra. Sin sorpresas.",
     "pricing.subtitle": "Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.",
-    "pricing.currency_prefix": "Todos los precios en",
-    "pricing.currency_suffix": "· por obra · al mes",
     "trial.title": "Empieza gratis. 1 obra, 14 días, todo incluido.",
     "trial.desc": "Sin tarjeta de crédito. Tus datos se conservan tras la prueba.",
     "trial.cta": "Probar gratis",
@@ -174,8 +172,6 @@ const translations = {
     "pricing.badge": "Preus",
     "pricing.title": "Paga per obra. Sense sorpreses.",
     "pricing.subtitle": "Com més obres gestionis, millor la teva tarifa. Totes les funcions incloses.",
-    "pricing.currency_prefix": "Tots els preus en",
-    "pricing.currency_suffix": "· per obra · al mes",
     "trial.title": "Comença gratis. 1 obra, 14 dies, tot inclòs.",
     "trial.desc": "Sense targeta de crèdit. Les teves dades es conserven després de la prova.",
     "trial.cta": "Provar gratis",
@@ -288,8 +284,6 @@ const translations = {
     "pricing.badge": "Pricing",
     "pricing.title": "Pay per project. No surprises.",
     "pricing.subtitle": "The more projects you manage, the better your rate. All features included.",
-    "pricing.currency_prefix": "All prices in",
-    "pricing.currency_suffix": "· per project · per month",
     "trial.title": "Start free. 1 project, 14 days, everything included.",
     "trial.desc": "No credit card required. Your data is preserved after the trial.",
     "trial.cta": "Try free",
@@ -392,10 +386,6 @@ function setCurrency(curr) {
   document.querySelectorAll("[data-currency-code]").forEach((el) => {
     el.textContent = code;
   });
-
-  document.querySelectorAll(".curr-btn").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.curr === curr);
-  });
 }
 
 /* ───── i18n Engine ───── */
@@ -452,10 +442,6 @@ function setLang(lang) {
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => setLang(btn.dataset.lang));
-});
-
-document.querySelectorAll(".curr-btn").forEach((btn) => {
-  btn.addEventListener("click", () => setCurrency(btn.dataset.curr));
 });
 
 setLang(detectLang());

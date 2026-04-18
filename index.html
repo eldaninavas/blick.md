@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260418-4" />
+    <link rel="stylesheet" href="./styles.css?v=20260418-6" />
   </head>
   <body>
     <header class="nav">
@@ -779,16 +779,6 @@
             <p class="badge" data-i18n="pricing.badge">Precios</p>
             <h2 data-i18n="pricing.title">Paga por obra. Sin sorpresas.</h2>
             <p class="section-sub" data-i18n="pricing.subtitle">Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.</p>
-            <div class="currency-switcher" role="tablist" aria-label="Currency">
-              <button class="curr-btn" data-curr="USD" type="button">🇺🇸 USD</button>
-              <button class="curr-btn" data-curr="EUR" type="button">🇪🇺 EUR</button>
-              <button class="curr-btn" data-curr="MXN" type="button">🇲🇽 MXN</button>
-            </div>
-            <p class="pricing-note">
-              <span data-i18n="pricing.currency_prefix">Todos los precios en</span>
-              <strong data-currency-code>USD</strong>
-              <span data-i18n="pricing.currency_suffix">· por obra · al mes</span>
-            </p>
           </div>
           <div class="trial-banner fade-up">
             <div class="trial-text">
@@ -801,6 +791,7 @@
             <article class="price-card fade-up">
               <h3>Starter</h3>
               <p class="price-range" data-i18n="plan.s_range">1 – 4 obras</p>
+              <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="s">$249</span><span data-i18n="plan.unit">/obra</span></p>
               <ul>
                 <li data-i18n="plan.s_f1">Todas las funciones</li>
@@ -814,6 +805,7 @@
               <p class="pill" data-i18n="plan.pill">Mejor valor</p>
               <h3>Growth</h3>
               <p class="price-range" data-i18n="plan.g_range">5 – 14 obras</p>
+              <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="g">$199</span><span data-i18n="plan.unit">/obra</span></p>
               <ul>
                 <li data-i18n="plan.g_f1">Todo lo de Starter</li>
@@ -826,6 +818,7 @@
             <article class="price-card fade-up">
               <h3>Enterprise</h3>
               <p class="price-range" data-i18n="plan.e_range">15+ obras</p>
+              <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="e">$149</span><span data-i18n="plan.unit">/obra</span></p>
               <ul>
                 <li data-i18n="plan.e_f1">Todo lo de Growth</li>
@@ -862,6 +855,6 @@
       </div>
     </footer>
 
-    <script src="./main.js?v=20260418-4"></script>
+    <script src="./main.js?v=20260418-6"></script>
   </body>
 </html>
