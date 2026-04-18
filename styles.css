@@ -144,8 +144,8 @@ h3 {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
-  background: rgba(127, 119, 221, 0.15);
-  color: #b8b3f0;
+  background: rgba(73, 226, 181, 0.14);
+  color: #7de3c4;
   margin-bottom: 8px;
 }
 
@@ -270,8 +270,8 @@ h3 {
   height: 550px;
   background: radial-gradient(
     ellipse,
-    rgba(239, 159, 39, 0.1) 0%,
-    rgba(127, 119, 221, 0.04) 45%,
+    rgba(27, 163, 154, 0.12) 0%,
+    rgba(73, 226, 181, 0.05) 45%,
     transparent 75%
   );
   pointer-events: none;
@@ -784,7 +784,7 @@ h3 {
 /* ───── Connect (Notifications + Integrations) ───── */
 .connect {
   padding: 100px 0;
-  background: linear-gradient(180deg, transparent, rgba(127, 119, 221, 0.03) 50%, transparent);
+  background: linear-gradient(180deg, transparent, rgba(73, 226, 181, 0.04) 50%, transparent);
 }
 
 .connect-grid {
@@ -993,11 +993,11 @@ h3 {
 }
 
 .price-card.featured {
-  border-color: rgba(127, 119, 221, 0.35);
+  border-color: rgba(73, 226, 181, 0.4);
   background: linear-gradient(
     180deg,
     var(--surface),
-    rgba(127, 119, 221, 0.04)
+    rgba(27, 163, 154, 0.06)
   );
 }
 
