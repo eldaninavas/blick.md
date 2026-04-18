@@ -952,6 +952,95 @@ h3 {
   padding: 100px 0;
 }
 
+.plan-tabs {
+  display: inline-flex;
+  gap: 4px;
+  margin-top: 28px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.plan-tab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.plan-tab:hover { color: var(--text); }
+
+.plan-tab.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  gap: 2px;
+  margin: 14px auto 0;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+
+.bill-btn {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bill-btn:hover { color: var(--text); }
+
+.bill-btn.active {
+  background: rgba(27, 163, 154, 0.18);
+  color: var(--primary-hover);
+}
+
+.bill-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--secondary);
+  background: rgba(73, 226, 181, 0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.pricing-grid--personal {
+  grid-template-columns: minmax(0, 420px);
+  justify-content: center;
+}
+
+.price-billing-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.bill-note-yr { display: none; }
+body.is-annual .bill-note-mo { display: none; }
+body.is-annual .bill-note-yr { display: inline; }
+
 .trial-banner {
   display: flex;
   align-items: center;

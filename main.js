@@ -60,6 +60,21 @@ const translations = {
     "pricing.badge": "Precios",
     "pricing.title": "Paga por obra. Sin sorpresas.",
     "pricing.subtitle": "Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.",
+    "pricing.tab_personal": "Personal",
+    "pricing.tab_business": "Empresa",
+    "pricing.bill_monthly": "Mensual",
+    "pricing.bill_annual": "Anual",
+    "pricing.bill_save": "−15%",
+    "pricing.bill_note_mo": "facturado mensualmente",
+    "pricing.bill_note_yr": "facturado anualmente",
+    "plan.personal_name": "Personal",
+    "plan.personal_range": "Uso individual",
+    "plan.personal_f1": "1 obra activa",
+    "plan.personal_f2": "1 usuario",
+    "plan.personal_f3": "20 extracciones IA/mes",
+    "plan.personal_f4": "1 enlace de invitado",
+    "plan.personal_f5": "Soporte por email",
+    "plan.unit_mo": "/mes",
     "trial.title": "Empieza gratis. 1 obra, 14 días, todo incluido.",
     "trial.desc": "Sin tarjeta de crédito. Tus datos se conservan tras la prueba.",
     "trial.cta": "Probar gratis",
@@ -172,6 +187,21 @@ const translations = {
     "pricing.badge": "Preus",
     "pricing.title": "Paga per obra. Sense sorpreses.",
     "pricing.subtitle": "Com més obres gestionis, millor la teva tarifa. Totes les funcions incloses.",
+    "pricing.tab_personal": "Personal",
+    "pricing.tab_business": "Empresa",
+    "pricing.bill_monthly": "Mensual",
+    "pricing.bill_annual": "Anual",
+    "pricing.bill_save": "−15%",
+    "pricing.bill_note_mo": "facturat mensualment",
+    "pricing.bill_note_yr": "facturat anualment",
+    "plan.personal_name": "Personal",
+    "plan.personal_range": "Ús individual",
+    "plan.personal_f1": "1 obra activa",
+    "plan.personal_f2": "1 usuari",
+    "plan.personal_f3": "20 extraccions IA/mes",
+    "plan.personal_f4": "1 enllaç de convidat",
+    "plan.personal_f5": "Suport per email",
+    "plan.unit_mo": "/mes",
     "trial.title": "Comença gratis. 1 obra, 14 dies, tot inclòs.",
     "trial.desc": "Sense targeta de crèdit. Les teves dades es conserven després de la prova.",
     "trial.cta": "Provar gratis",
@@ -284,6 +314,21 @@ const translations = {
     "pricing.badge": "Pricing",
     "pricing.title": "Pay per project. No surprises.",
     "pricing.subtitle": "The more projects you manage, the better your rate. All features included.",
+    "pricing.tab_personal": "Personal",
+    "pricing.tab_business": "Business",
+    "pricing.bill_monthly": "Monthly",
+    "pricing.bill_annual": "Annual",
+    "pricing.bill_save": "−15%",
+    "pricing.bill_note_mo": "billed monthly",
+    "pricing.bill_note_yr": "billed annually",
+    "plan.personal_name": "Personal",
+    "plan.personal_range": "Individual use",
+    "plan.personal_f1": "1 active project",
+    "plan.personal_f2": "1 user",
+    "plan.personal_f3": "20 AI extractions/month",
+    "plan.personal_f4": "1 guest link",
+    "plan.personal_f5": "Email support",
+    "plan.unit_mo": "/mo",
     "trial.title": "Start free. 1 project, 14 days, everything included.",
     "trial.desc": "No credit card required. Your data is preserved after the trial.",
     "trial.cta": "Try free",
@@ -337,16 +382,25 @@ const translations = {
   },
 };
 
-/* ───── Currency ───── */
+/* ───── Currency & Billing ───── */
 const CURRENCIES = {
-  USD: { symbol: "$", code: "USD", prices: { s: 249, g: 199, e: 149 } },
-  EUR: { symbol: "€", code: "EUR", prices: { s: 229, g: 179, e: 139 } },
-  MXN: { symbol: "$", code: "MXN", prices: { s: 2490, g: 1990, e: 1490 } },
+  USD: { symbol: "$", code: "USD", prices: { personal: 29, s: 249, g: 199, e: 149 } },
+  EUR: { symbol: "€", code: "EUR", prices: { personal: 29, s: 229, g: 179, e: 139 } },
+  MXN: { symbol: "$", code: "MXN", prices: { personal: 499, s: 2490, g: 1990, e: 1490 } },
 };
+
+const ANNUAL_DISCOUNT = 0.15;
 
 function formatPrice(curr, amount) {
   const { symbol } = CURRENCIES[curr];
   return symbol + amount.toLocaleString("en-US");
+}
+
+function priceFor(curr, plan, billing) {
+  const base = CURRENCIES[curr].prices[plan];
+  if (base === undefined) return "";
+  const amount = billing === "annual" ? Math.round(base * (1 - ANNUAL_DISCOUNT)) : base;
+  return formatPrice(curr, amount);
 }
 
 function detectCurrency() {
@@ -371,21 +425,62 @@ function detectCurrency() {
   return "USD";
 }
 
-function setCurrency(curr) {
-  if (!CURRENCIES[curr]) curr = "USD";
-  localStorage.setItem("blick_currency", curr);
+function getBilling() {
+  return localStorage.getItem("blick_billing") === "annual" ? "annual" : "monthly";
+}
 
-  const { prices, code } = CURRENCIES[curr];
+function getCurrency() {
+  const stored = localStorage.getItem("blick_currency");
+  return stored && CURRENCIES[stored] ? stored : "USD";
+}
+
+function renderPrices() {
+  const curr = getCurrency();
+  const billing = getBilling();
+  const code = CURRENCIES[curr].code;
+
   document.querySelectorAll("[data-plan-price]").forEach((el) => {
     const plan = el.getAttribute("data-plan-price");
-    if (prices[plan] !== undefined) {
-      el.textContent = formatPrice(curr, prices[plan]);
-    }
+    const rendered = priceFor(curr, plan, billing);
+    if (rendered) el.textContent = rendered;
   });
 
   document.querySelectorAll("[data-currency-code]").forEach((el) => {
     el.textContent = code;
   });
+}
+
+function setCurrency(curr) {
+  if (!CURRENCIES[curr]) curr = "USD";
+  localStorage.setItem("blick_currency", curr);
+  renderPrices();
+}
+
+function setBilling(billing) {
+  const val = billing === "annual" ? "annual" : "monthly";
+  localStorage.setItem("blick_billing", val);
+  renderPrices();
+
+  document.querySelectorAll(".bill-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.billing === val);
+  });
+  document.body.classList.toggle("is-annual", val === "annual");
+}
+
+function setPlanTab(tab) {
+  const val = tab === "personal" ? "personal" : "business";
+  localStorage.setItem("blick_plan_tab", val);
+
+  document.querySelectorAll(".plan-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.planTab === val);
+  });
+  document.querySelectorAll("[data-plan-tab-content]").forEach((el) => {
+    el.hidden = el.getAttribute("data-plan-tab-content") !== val;
+  });
+}
+
+function detectPlanTab() {
+  return localStorage.getItem("blick_plan_tab") === "personal" ? "personal" : "business";
 }
 
 /* ───── i18n Engine ───── */
@@ -444,8 +539,18 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => setLang(btn.dataset.lang));
 });
 
+document.querySelectorAll(".plan-tab").forEach((btn) => {
+  btn.addEventListener("click", () => setPlanTab(btn.dataset.planTab));
+});
+
+document.querySelectorAll(".bill-btn").forEach((btn) => {
+  btn.addEventListener("click", () => setBilling(btn.dataset.billing));
+});
+
 setLang(detectLang());
 setCurrency(detectCurrency());
+setBilling(getBilling());
+setPlanTab(detectPlanTab());
 
 /* ───── Blueprint Sequence ───── */
 (function () {

@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260418-6" />
+    <link rel="stylesheet" href="./styles.css?v=20260418-7" />
   </head>
   <body>
     <header class="nav">
@@ -779,6 +779,17 @@
             <p class="badge" data-i18n="pricing.badge">Precios</p>
             <h2 data-i18n="pricing.title">Paga por obra. Sin sorpresas.</h2>
             <p class="section-sub" data-i18n="pricing.subtitle">Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.</p>
+            <div class="plan-tabs" role="tablist">
+              <button class="plan-tab" data-plan-tab="personal" type="button" data-i18n="pricing.tab_personal">Personal</button>
+              <button class="plan-tab active" data-plan-tab="business" type="button" data-i18n="pricing.tab_business">Empresa</button>
+            </div>
+            <div class="billing-toggle" role="tablist">
+              <button class="bill-btn active" data-billing="monthly" type="button" data-i18n="pricing.bill_monthly">Mensual</button>
+              <button class="bill-btn" data-billing="annual" type="button">
+                <span data-i18n="pricing.bill_annual">Anual</span>
+                <span class="bill-badge" data-i18n="pricing.bill_save">−15%</span>
+              </button>
+            </div>
           </div>
           <div class="trial-banner fade-up">
             <div class="trial-text">
@@ -787,12 +798,40 @@
             </div>
             <a href="#register" class="btn btn-pill" data-i18n="trial.cta">Probar gratis</a>
           </div>
-          <div class="pricing-grid">
+
+          <!-- Personal tab -->
+          <div class="pricing-grid pricing-grid--personal" data-plan-tab-content="personal" hidden>
+            <article class="price-card featured fade-up">
+              <h3 data-i18n="plan.personal_name">Personal</h3>
+              <p class="price-range" data-i18n="plan.personal_range">Uso individual</p>
+              <p class="price-currency" data-currency-code>USD</p>
+              <p class="price"><span data-plan-price="personal">$29</span><span data-i18n="plan.unit_mo">/mes</span></p>
+              <p class="price-billing-note">
+                <span class="bill-note-mo" data-i18n="pricing.bill_note_mo">facturado mensualmente</span>
+                <span class="bill-note-yr" data-i18n="pricing.bill_note_yr">facturado anualmente</span>
+              </p>
+              <ul>
+                <li data-i18n="plan.personal_f1">1 obra activa</li>
+                <li data-i18n="plan.personal_f2">1 usuario</li>
+                <li data-i18n="plan.personal_f3">20 extracciones IA/mes</li>
+                <li data-i18n="plan.personal_f4">1 enlace de invitado</li>
+                <li data-i18n="plan.personal_f5">Soporte por email</li>
+              </ul>
+              <a href="#register" class="btn btn-pill btn-block" data-i18n="plan.cta">Comenzar</a>
+            </article>
+          </div>
+
+          <!-- Business tab -->
+          <div class="pricing-grid" data-plan-tab-content="business">
             <article class="price-card fade-up">
               <h3>Starter</h3>
               <p class="price-range" data-i18n="plan.s_range">1 – 4 obras</p>
               <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="s">$249</span><span data-i18n="plan.unit">/obra</span></p>
+              <p class="price-billing-note">
+                <span class="bill-note-mo" data-i18n="pricing.bill_note_mo">facturado mensualmente</span>
+                <span class="bill-note-yr" data-i18n="pricing.bill_note_yr">facturado anualmente</span>
+              </p>
               <ul>
                 <li data-i18n="plan.s_f1">Todas las funciones</li>
                 <li data-i18n="plan.s_f2">Usuarios ilimitados</li>
@@ -807,6 +846,10 @@
               <p class="price-range" data-i18n="plan.g_range">5 – 14 obras</p>
               <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="g">$199</span><span data-i18n="plan.unit">/obra</span></p>
+              <p class="price-billing-note">
+                <span class="bill-note-mo" data-i18n="pricing.bill_note_mo">facturado mensualmente</span>
+                <span class="bill-note-yr" data-i18n="pricing.bill_note_yr">facturado anualmente</span>
+              </p>
               <ul>
                 <li data-i18n="plan.g_f1">Todo lo de Starter</li>
                 <li data-i18n="plan.g_f2">Descuento por volumen</li>
@@ -820,6 +863,10 @@
               <p class="price-range" data-i18n="plan.e_range">15+ obras</p>
               <p class="price-currency" data-currency-code>USD</p>
               <p class="price"><span data-plan-price="e">$149</span><span data-i18n="plan.unit">/obra</span></p>
+              <p class="price-billing-note">
+                <span class="bill-note-mo" data-i18n="pricing.bill_note_mo">facturado mensualmente</span>
+                <span class="bill-note-yr" data-i18n="pricing.bill_note_yr">facturado anualmente</span>
+              </p>
               <ul>
                 <li data-i18n="plan.e_f1">Todo lo de Growth</li>
                 <li data-i18n="plan.e_f2">Account manager dedicado</li>
@@ -855,6 +902,6 @@
       </div>
     </footer>
 
-    <script src="./main.js?v=20260418-6"></script>
+    <script src="./main.js?v=20260418-7"></script>
   </body>
 </html>
