@@ -1031,6 +1031,10 @@ h3 {
   justify-content: center;
 }
 
+.pricing-grid[hidden] {
+  display: none;
+}
+
 .price-billing-note {
   color: var(--muted);
   font-size: 0.78rem;
