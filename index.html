@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260418-8" />
+    <link rel="stylesheet" href="./styles.css?v=20260418-9" />
   </head>
   <body>
     <header class="nav">
@@ -780,8 +780,8 @@
             <h2 data-i18n="pricing.title">Paga por obra. Sin sorpresas.</h2>
             <p class="section-sub" data-i18n="pricing.subtitle">Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.</p>
             <div class="plan-tabs" role="tablist">
-              <button class="plan-tab" data-plan-tab="personal" type="button" data-i18n="pricing.tab_personal">Personal</button>
               <button class="plan-tab active" data-plan-tab="business" type="button" data-i18n="pricing.tab_business">Empresa</button>
+              <button class="plan-tab" data-plan-tab="personal" type="button" data-i18n="pricing.tab_personal">Personal</button>
             </div>
             <div class="billing-toggle" role="tablist">
               <button class="bill-btn active" data-billing="monthly" type="button" data-i18n="pricing.bill_monthly">Mensual</button>
@@ -801,15 +801,10 @@
 
           <!-- Personal tab -->
           <div class="pricing-grid pricing-grid--personal" data-plan-tab-content="personal" hidden>
-            <article class="price-card featured fade-up">
+            <article class="price-card price-card--coming-soon fade-up">
               <h3 data-i18n="plan.personal_name">Personal</h3>
               <p class="price-range" data-i18n="plan.personal_range">Uso individual</p>
-              <p class="price-currency" data-currency-code>USD</p>
-              <p class="price"><span data-plan-price="personal">$29</span><span data-i18n="plan.unit_mo">/mes</span></p>
-              <p class="price-billing-note">
-                <span class="bill-note-mo" data-i18n="pricing.bill_note_mo">facturado mensualmente</span>
-                <span class="bill-note-yr" data-i18n="pricing.bill_note_yr">facturado anualmente</span>
-              </p>
+              <p class="coming-soon-tag" data-i18n="plan.coming_soon">Próximamente...</p>
               <ul>
                 <li data-i18n="plan.personal_f1">1 obra activa</li>
                 <li data-i18n="plan.personal_f2">1 usuario</li>
@@ -817,7 +812,7 @@
                 <li data-i18n="plan.personal_f4">1 enlace de invitado</li>
                 <li data-i18n="plan.personal_f5">Soporte por email</li>
               </ul>
-              <a href="#register" class="btn btn-pill btn-block" data-i18n="plan.cta">Comenzar</a>
+              <button class="btn btn-ghost-pill btn-block" disabled data-i18n="plan.coming_soon">Próximamente...</button>
             </article>
           </div>
 
@@ -902,6 +897,6 @@
       </div>
     </footer>
 
-    <script src="./main.js?v=20260418-8"></script>
+    <script src="./main.js?v=20260418-9"></script>
   </body>
 </html>
