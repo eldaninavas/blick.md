@@ -339,7 +339,7 @@ const translations = {
 
 /* ───── i18n Engine ───── */
 function detectLang() {
-  const stored = localStorage.getItem("clingio_lang");
+  const stored = localStorage.getItem("blick_lang");
   if (stored && translations[stored]) return stored;
 
   const nav = navigator.language.toLowerCase();
@@ -367,7 +367,7 @@ function buildNotifFeed(lang) {
 }
 
 function setLang(lang) {
-  localStorage.setItem("clingio_lang", lang);
+  localStorage.setItem("blick_lang", lang);
   document.documentElement.lang = lang;
 
   const strings = translations[lang];
@@ -520,7 +520,7 @@ if (registerForm) {
 
     const formData = new FormData(registerForm);
     const payload = Object.fromEntries(formData.entries());
-    payload.lang = localStorage.getItem("clingio_lang") || detectLang();
+    payload.lang = localStorage.getItem("blick_lang") || detectLang();
 
     const btn = registerForm.querySelector("button");
     btn.disabled = true;
@@ -547,7 +547,7 @@ if (registerForm) {
       })
       .finally(() => {
         btn.disabled = false;
-        const lang = localStorage.getItem("clingio_lang") || detectLang();
+        const lang = localStorage.getItem("blick_lang") || detectLang();
         btn.textContent = translations[lang]["reg.submit"];
       });
   });

@@ -12,16 +12,24 @@ html {
 }
 
 :root {
-  --bg: #080910;
-  --surface: #0f1019;
-  --surface-2: #161825;
+  --bg: #020202;
+  --surface: #060A0C;
+  --surface-2: #0e1214;
   --border: rgba(255, 255, 255, 0.07);
   --border-hover: rgba(255, 255, 255, 0.14);
-  --text: #eeeef2;
-  --muted: #7d819a;
-  --primary: #ef9f27;
-  --primary-hover: #f5b04a;
-  --secondary: #7f77dd;
+  --text: #F3F3F3;
+  --muted: #7d8a90;
+  --primary: #1BA39A;
+  --primary-hover: #33C9A5;
+  --secondary: #49E2B5;
+}
+
+/* Brand wordmark gradient — apply to the "B" and ".md" spans. */
+.brand-gradient {
+  background: linear-gradient(90deg, #137C80 0%, #1BA39A 33%, #33C9A5 66%, #49E2B5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 body {
@@ -187,10 +195,19 @@ h3 {
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
 }
 
-.brand span {
-  color: var(--primary);
+.brand-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(27, 163, 154, 0.25));
+}
+
+.brand-logo-sm {
+  height: 24px;
 }
 
 .nav-links {
@@ -1092,10 +1109,6 @@ h3 {
   font-size: 1rem;
 }
 
-.brand-sm span {
-  color: var(--primary);
-}
-
 .footer-product {
   color: var(--muted);
   font-size: 0.85rem;
@@ -1105,6 +1118,10 @@ h3 {
 @media (max-width: 768px) {
   .hero {
     padding: 72px 0 56px;
+  }
+
+  .brand-logo {
+    height: 28px;
   }
 
   .highlights-grid {
