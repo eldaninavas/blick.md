@@ -633,7 +633,8 @@ renderCalc();
         currentZone = step.z;
         const [x, y] = pos[step.z];
 
-        if (worker.style.opacity === "0") {
+        const snapIn = worker.style.opacity === "" || worker.style.opacity === "0";
+        if (snapIn) {
           worker.style.transition = "none";
           worker.style.transform = `translate(${x}px, ${y}px)`;
           worker.offsetHeight;
@@ -648,13 +649,14 @@ renderCalc();
         setTimeout(() => {
           worker.classList.add("hammering");
           applyZone(step.z, step.s, step.m);
-        }, 650);
+        }, snapIn ? 250 : 650);
       }
     }
 
     i = (i + 1) % steps.length;
   }
 
+  tick();
   setInterval(tick, 1500);
 })();
 
