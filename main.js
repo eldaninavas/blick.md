@@ -58,46 +58,31 @@ const translations = {
     "wf.3_t": "Supervisa y reporta",
     "wf.3_d": "Supervisores ven el avance en tiempo real, resuelven excepciones y generan reportes PDF o Excel con marca del tenant.",
     "pricing.badge": "Precios",
-    "pricing.title": "Paga por obra. Sin sorpresas.",
-    "pricing.subtitle": "Cuantas más obras gestiones, mejor tu tarifa. Todas las funciones incluidas.",
-    "pricing.tab_personal": "Personal",
-    "pricing.tab_business": "Empresa",
+    "pricing.title": "Tu supervisor 24/7. Precio por obra.",
+    "pricing.subtitle": "Paga menos por obra cuando gestionas más. Todas las funciones incluidas. Primera obra gratis 30 días.",
     "pricing.bill_monthly": "Mensual",
     "pricing.bill_annual": "Anual",
-    "pricing.bill_save": "−15%",
-    "pricing.bill_note_mo": "facturado mensualmente",
-    "pricing.bill_note_yr": "facturado anualmente",
-    "plan.personal_name": "Personal",
-    "plan.personal_range": "Uso individual",
-    "plan.personal_f1": "1 obra activa",
-    "plan.personal_f2": "1 usuario",
-    "plan.personal_f3": "20 extracciones IA/mes",
-    "plan.personal_f4": "1 enlace de invitado",
-    "plan.personal_f5": "Soporte por email",
-    "plan.coming_soon": "Próximamente...",
-    "plan.unit_mo": "/mes",
-    "trial.title": "Empieza gratis. 1 obra, 14 días, todo incluido.",
-    "trial.desc": "Sin tarjeta de crédito. Tus datos se conservan tras la prueba.",
+    "pricing.bill_save": "2 meses gratis",
+    "trial.title": "Tu primera obra, gratis por 30 días.",
+    "trial.desc": "Sin tarjeta de crédito. Cancela cuando quieras. Tus datos se conservan.",
     "trial.cta": "Probar gratis",
-    "plan.s_range": "1 – 4 obras",
-    "plan.unit": "/obra",
-    "plan.s_f1": "Todas las funciones",
-    "plan.s_f2": "Usuarios ilimitados",
-    "plan.s_f3": "Planos y zonas",
-    "plan.s_f4": "IA para materiales",
-    "plan.cta": "Comenzar",
-    "plan.pill": "Mejor valor",
-    "plan.g_range": "5 – 14 obras",
-    "plan.g_f1": "Todo lo de Starter",
-    "plan.g_f2": "Descuento por volumen",
-    "plan.g_f3": "Reportes avanzados",
-    "plan.g_f4": "Onboarding prioritario",
-    "plan.e_range": "15+ obras",
-    "plan.e_f1": "Todo lo de Growth",
-    "plan.e_f2": "Account manager dedicado",
-    "plan.e_f3": "Integraciones a medida",
-    "plan.e_f4": "SLA y soporte prioritario",
-    "plan.cta_contact": "Contactar",
+    "calc.currency_label": "Moneda",
+    "calc.obras_label": "¿Cuántas obras gestionas?",
+    "calc.obras_unit": "obras activas",
+    "calc.band_1": "1 – 4 obras",
+    "calc.band_2": "5 – 10 obras",
+    "calc.band_3": "11+ obras",
+    "calc.per_obra": "por obra",
+    "calc.per_month": "/mes",
+    "calc.per_year": "/año",
+    "calc.blended_note": "Todas tus obras se cobran al precio del tramo donde caes (precio blended). Más obras = mejor tarifa en TODAS.",
+    "calc.v1": "Alertas tempranas de fraude y mala ejecución",
+    "calc.v2": "Planos interactivos con seguimiento visual por zona",
+    "calc.v3": "Reportes PDF y Excel con tu marca",
+    "calc.v4": "Equipo ilimitado y accesos de invitado",
+    "calc.roi_title": "Si Blick evita UN solo fraude o retraso de obra…",
+    "calc.roi_body": "El costo de la suscripción se paga solo. El resto del año es ahorro puro.",
+    "calc.cta": "Empezar gratis 30 días",
     "reg.title": "Empieza a controlar tus obras",
     "reg.desc": "Cuéntanos sobre tu operación y te contactamos con una propuesta a medida.",
     "reg.ph_name": "Nombre completo",
@@ -186,46 +171,31 @@ const translations = {
     "wf.3_t": "Supervisa i reporta",
     "wf.3_d": "Els supervisors veuen l'avenç en temps real, resolen excepcions i generen informes PDF o Excel amb marca del tenant.",
     "pricing.badge": "Preus",
-    "pricing.title": "Paga per obra. Sense sorpreses.",
-    "pricing.subtitle": "Com més obres gestionis, millor la teva tarifa. Totes les funcions incloses.",
-    "pricing.tab_personal": "Personal",
-    "pricing.tab_business": "Empresa",
+    "pricing.title": "El teu supervisor 24/7. Preu per obra.",
+    "pricing.subtitle": "Paga menys per obra quan en gestiones més. Totes les funcions incloses. Primera obra gratis 30 dies.",
     "pricing.bill_monthly": "Mensual",
     "pricing.bill_annual": "Anual",
-    "pricing.bill_save": "−15%",
-    "pricing.bill_note_mo": "facturat mensualment",
-    "pricing.bill_note_yr": "facturat anualment",
-    "plan.personal_name": "Personal",
-    "plan.personal_range": "Ús individual",
-    "plan.personal_f1": "1 obra activa",
-    "plan.personal_f2": "1 usuari",
-    "plan.personal_f3": "20 extraccions IA/mes",
-    "plan.personal_f4": "1 enllaç de convidat",
-    "plan.personal_f5": "Suport per email",
-    "plan.coming_soon": "Ben aviat...",
-    "plan.unit_mo": "/mes",
-    "trial.title": "Comença gratis. 1 obra, 14 dies, tot inclòs.",
-    "trial.desc": "Sense targeta de crèdit. Les teves dades es conserven després de la prova.",
+    "pricing.bill_save": "2 mesos gratis",
+    "trial.title": "La teva primera obra, gratis 30 dies.",
+    "trial.desc": "Sense targeta de crèdit. Cancel·la quan vulguis. Les teves dades es conserven.",
     "trial.cta": "Provar gratis",
-    "plan.s_range": "1 – 4 obres",
-    "plan.unit": "/obra",
-    "plan.s_f1": "Totes les funcions",
-    "plan.s_f2": "Usuaris il·limitats",
-    "plan.s_f3": "Plànols i zones",
-    "plan.s_f4": "IA per a materials",
-    "plan.cta": "Començar",
-    "plan.pill": "Millor valor",
-    "plan.g_range": "5 – 14 obres",
-    "plan.g_f1": "Tot el de Starter",
-    "plan.g_f2": "Descompte per volum",
-    "plan.g_f3": "Informes avançats",
-    "plan.g_f4": "Onboarding prioritari",
-    "plan.e_range": "15+ obres",
-    "plan.e_f1": "Tot el de Growth",
-    "plan.e_f2": "Account manager dedicat",
-    "plan.e_f3": "Integracions a mida",
-    "plan.e_f4": "SLA i suport prioritari",
-    "plan.cta_contact": "Contactar",
+    "calc.currency_label": "Moneda",
+    "calc.obras_label": "Quantes obres gestiones?",
+    "calc.obras_unit": "obres actives",
+    "calc.band_1": "1 – 4 obres",
+    "calc.band_2": "5 – 10 obres",
+    "calc.band_3": "11+ obres",
+    "calc.per_obra": "per obra",
+    "calc.per_month": "/mes",
+    "calc.per_year": "/any",
+    "calc.blended_note": "Totes les teves obres es cobren al preu del tram on caus (preu blended). Més obres = millor tarifa per TOTES.",
+    "calc.v1": "Alertes primerenques de frau i mala execució",
+    "calc.v2": "Plànols interactius amb seguiment visual per zona",
+    "calc.v3": "Informes PDF i Excel amb la teva marca",
+    "calc.v4": "Equip il·limitat i accessos d'invitat",
+    "calc.roi_title": "Si Blick evita UN sol frau o retard d'obra…",
+    "calc.roi_body": "El cost de la subscripció es paga sol. La resta de l'any és estalvi pur.",
+    "calc.cta": "Començar gratis 30 dies",
     "reg.title": "Comença a controlar les teves obres",
     "reg.desc": "Explica'ns la teva operació i et contactarem amb una proposta a mida.",
     "reg.ph_name": "Nom complet",
@@ -314,46 +284,31 @@ const translations = {
     "wf.3_t": "Supervise and report",
     "wf.3_d": "Supervisors see real-time progress, resolve exceptions, and generate branded PDF or Excel reports.",
     "pricing.badge": "Pricing",
-    "pricing.title": "Pay per project. No surprises.",
-    "pricing.subtitle": "The more projects you manage, the better your rate. All features included.",
-    "pricing.tab_personal": "Personal",
-    "pricing.tab_business": "Business",
+    "pricing.title": "Your 24/7 supervisor. Per-project pricing.",
+    "pricing.subtitle": "Pay less per project as you manage more. All features included. First project free for 30 days.",
     "pricing.bill_monthly": "Monthly",
     "pricing.bill_annual": "Annual",
-    "pricing.bill_save": "−15%",
-    "pricing.bill_note_mo": "billed monthly",
-    "pricing.bill_note_yr": "billed annually",
-    "plan.personal_name": "Personal",
-    "plan.personal_range": "Individual use",
-    "plan.personal_f1": "1 active project",
-    "plan.personal_f2": "1 user",
-    "plan.personal_f3": "20 AI extractions/month",
-    "plan.personal_f4": "1 guest link",
-    "plan.personal_f5": "Email support",
-    "plan.coming_soon": "Coming soon...",
-    "plan.unit_mo": "/mo",
-    "trial.title": "Start free. 1 project, 14 days, everything included.",
-    "trial.desc": "No credit card required. Your data is preserved after the trial.",
+    "pricing.bill_save": "2 months free",
+    "trial.title": "Your first project, free for 30 days.",
+    "trial.desc": "No credit card required. Cancel anytime. Your data is preserved.",
     "trial.cta": "Try free",
-    "plan.s_range": "1 – 4 projects",
-    "plan.unit": "/project",
-    "plan.s_f1": "All features",
-    "plan.s_f2": "Unlimited users",
-    "plan.s_f3": "Blueprints & zones",
-    "plan.s_f4": "AI for materials",
-    "plan.cta": "Get started",
-    "plan.pill": "Best value",
-    "plan.g_range": "5 – 14 projects",
-    "plan.g_f1": "Everything in Starter",
-    "plan.g_f2": "Volume discount",
-    "plan.g_f3": "Advanced reports",
-    "plan.g_f4": "Priority onboarding",
-    "plan.e_range": "15+ projects",
-    "plan.e_f1": "Everything in Growth",
-    "plan.e_f2": "Dedicated account manager",
-    "plan.e_f3": "Custom integrations",
-    "plan.e_f4": "SLA & priority support",
-    "plan.cta_contact": "Contact us",
+    "calc.currency_label": "Currency",
+    "calc.obras_label": "How many projects do you manage?",
+    "calc.obras_unit": "active projects",
+    "calc.band_1": "1 – 4 projects",
+    "calc.band_2": "5 – 10 projects",
+    "calc.band_3": "11+ projects",
+    "calc.per_obra": "per project",
+    "calc.per_month": "/mo",
+    "calc.per_year": "/yr",
+    "calc.blended_note": "All your projects are billed at the rate of the bracket you're in (blended pricing). More projects = better rate on ALL of them.",
+    "calc.v1": "Early alerts for fraud and poor execution",
+    "calc.v2": "Interactive blueprints with per-zone tracking",
+    "calc.v3": "PDF and Excel reports with your branding",
+    "calc.v4": "Unlimited team members and guest links",
+    "calc.roi_title": "If Blick prevents ONE fraud or project delay…",
+    "calc.roi_body": "The subscription pays for itself. The rest of the year is pure savings.",
+    "calc.cta": "Start free 30-day trial",
     "reg.title": "Start controlling your projects",
     "reg.desc": "Tell us about your operation and we'll reach out with a tailored proposal.",
     "reg.ph_name": "Full name",
@@ -385,30 +340,38 @@ const translations = {
   },
 };
 
-/* ───── Currency & Billing ───── */
-const CURRENCIES = {
-  USD: { symbol: "$", code: "USD", prices: { personal: 29, s: 249, g: 199, e: 149 } },
-  EUR: { symbol: "€", code: "EUR", prices: { personal: 29, s: 229, g: 179, e: 139 } },
-  MXN: { symbol: "$", code: "MXN", prices: { personal: 499, s: 2490, g: 1990, e: 1490 } },
+/* ───── Pricing Calculator ─────
+ * Tiered volume pricing — matches backend seed-stripe.ts MONTHLY_TIERS.
+ * Per obra / month. Yearly = ×10 (2 months free).
+ * Band boundaries match backend: 1–4 → t1, 5–10 → t2, 11+ → t3.
+ */
+const TIERED_PRICES = {
+  USD: { symbol: "$", code: "USD", t1: 379, t2: 325, t3: 299 },
+  EUR: { symbol: "€", code: "EUR", t1: 350, t2: 300, t3: 280 },
+  MXN: { symbol: "$", code: "MXN", t1: 3499, t2: 2999, t3: 2799 },
 };
 
-const ANNUAL_DISCOUNT = 0.15;
-
 function formatPrice(curr, amount) {
-  const { symbol } = CURRENCIES[curr];
+  const { symbol } = TIERED_PRICES[curr];
   return symbol + amount.toLocaleString("en-US");
 }
 
-function priceFor(curr, plan, billing) {
-  const base = CURRENCIES[curr].prices[plan];
-  if (base === undefined) return "";
-  const amount = billing === "annual" ? Math.round(base * (1 - ANNUAL_DISCOUNT)) : base;
-  return formatPrice(curr, amount);
+function tierForQty(qty) {
+  if (qty <= 4) return 1;
+  if (qty <= 10) return 2;
+  return 3;
+}
+
+function rateForQty(curr, qty, billing) {
+  const tiers = TIERED_PRICES[curr];
+  const band = tierForQty(qty);
+  const monthly = band === 1 ? tiers.t1 : band === 2 ? tiers.t2 : tiers.t3;
+  return billing === "annual" ? monthly * 10 : monthly;
 }
 
 function detectCurrency() {
   const stored = localStorage.getItem("blick_currency");
-  if (stored && CURRENCIES[stored]) return stored;
+  if (stored && TIERED_PRICES[stored]) return stored;
 
   const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "").toLowerCase();
   if (tz.includes("mexico")) return "MXN";
@@ -434,56 +397,86 @@ function getBilling() {
 
 function getCurrency() {
   const stored = localStorage.getItem("blick_currency");
-  return stored && CURRENCIES[stored] ? stored : "USD";
+  return stored && TIERED_PRICES[stored] ? stored : "USD";
 }
 
-function renderPrices() {
+function getObras() {
+  const raw = localStorage.getItem("blick_obras");
+  const n = parseInt(raw, 10);
+  return Number.isFinite(n) && n >= 1 && n <= 20 ? n : 5;
+}
+
+// Refreshes the pricing calculator from current currency + billing + obra count.
+// Driven by three user inputs (currency tabs, billing toggle, slider) plus the
+// language engine (which updates period/labels after DOM i18n pass).
+function renderCalc() {
   const curr = getCurrency();
   const billing = getBilling();
-  const code = CURRENCIES[curr].code;
+  const qty = getObras();
+  const tiers = TIERED_PRICES[curr];
+  const band = tierForQty(qty);
+  const mult = billing === "annual" ? 10 : 1;
 
-  document.querySelectorAll("[data-plan-price]").forEach((el) => {
-    const plan = el.getAttribute("data-plan-price");
-    const rendered = priceFor(curr, plan, billing);
-    if (rendered) el.textContent = rendered;
+  const countEl = document.getElementById("calcObrasCount");
+  if (countEl) countEl.textContent = qty === 20 ? "20+" : String(qty);
+
+  const sliderEl = document.getElementById("calcObrasSlider");
+  if (sliderEl && Number(sliderEl.value) !== qty) sliderEl.value = String(qty);
+
+  [1, 2, 3].forEach((b) => {
+    const el = document.querySelector(`[data-band-rate="${b}"]`);
+    if (!el) return;
+    const rate = (b === 1 ? tiers.t1 : b === 2 ? tiers.t2 : tiers.t3) * mult;
+    el.textContent = formatPrice(curr, rate);
   });
 
-  document.querySelectorAll("[data-currency-code]").forEach((el) => {
-    el.textContent = code;
+  document.querySelectorAll(".calc-band").forEach((el) => {
+    el.classList.toggle("active", Number(el.dataset.band) === band);
+  });
+
+  const perObraRate = rateForQty(curr, qty, billing);
+  const total = perObraRate * qty;
+
+  const lineEl = document.getElementById("calcLineSum");
+  if (lineEl) {
+    lineEl.textContent = `${qty === 20 ? "20+" : qty} × ${formatPrice(curr, perObraRate)}`;
+  }
+  const totalEl = document.getElementById("calcTotal");
+  if (totalEl) totalEl.textContent = formatPrice(curr, total);
+
+  const periodEl = document.getElementById("calcPeriod");
+  if (periodEl) {
+    const lang = localStorage.getItem("blick_lang") || detectLang();
+    const key = billing === "annual" ? "calc.per_year" : "calc.per_month";
+    const fallback = billing === "annual" ? "/año" : "/mes";
+    periodEl.textContent = (translations[lang] && translations[lang][key]) || fallback;
+  }
+
+  document.querySelectorAll(".curr-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.curr === curr);
   });
 }
 
 function setCurrency(curr) {
-  if (!CURRENCIES[curr]) curr = "USD";
+  if (!TIERED_PRICES[curr]) curr = "USD";
   localStorage.setItem("blick_currency", curr);
-  renderPrices();
+  renderCalc();
 }
 
 function setBilling(billing) {
   const val = billing === "annual" ? "annual" : "monthly";
   localStorage.setItem("blick_billing", val);
-  renderPrices();
-
   document.querySelectorAll(".bill-btn").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.billing === val);
   });
   document.body.classList.toggle("is-annual", val === "annual");
+  renderCalc();
 }
 
-function setPlanTab(tab) {
-  const val = tab === "personal" ? "personal" : "business";
-  localStorage.setItem("blick_plan_tab", val);
-
-  document.querySelectorAll(".plan-tab").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.planTab === val);
-  });
-  document.querySelectorAll("[data-plan-tab-content]").forEach((el) => {
-    el.hidden = el.getAttribute("data-plan-tab-content") !== val;
-  });
-}
-
-function detectPlanTab() {
-  return localStorage.getItem("blick_plan_tab") === "personal" ? "personal" : "business";
+function setObras(n) {
+  const v = Math.max(1, Math.min(20, Math.round(Number(n) || 5)));
+  localStorage.setItem("blick_obras", String(v));
+  renderCalc();
 }
 
 /* ───── i18n Engine ───── */
@@ -536,24 +529,33 @@ function setLang(lang) {
   });
 
   buildNotifFeed(lang);
+  // The period label (/mes vs /año) is read from the current language, so
+  // re-render the calculator whenever the language flips.
+  if (typeof renderCalc === "function") renderCalc();
 }
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => setLang(btn.dataset.lang));
 });
 
-document.querySelectorAll(".plan-tab").forEach((btn) => {
-  btn.addEventListener("click", () => setPlanTab(btn.dataset.planTab));
-});
-
 document.querySelectorAll(".bill-btn").forEach((btn) => {
   btn.addEventListener("click", () => setBilling(btn.dataset.billing));
 });
 
+document.querySelectorAll(".curr-btn").forEach((btn) => {
+  btn.addEventListener("click", () => setCurrency(btn.dataset.curr));
+});
+
+const obrasSlider = document.getElementById("calcObrasSlider");
+if (obrasSlider) {
+  obrasSlider.value = String(getObras());
+  obrasSlider.addEventListener("input", (e) => setObras(e.target.value));
+}
+
 setLang(detectLang());
 setCurrency(detectCurrency());
 setBilling(getBilling());
-setPlanTab(detectPlanTab());
+renderCalc();
 
 /* ───── Blueprint Sequence ───── */
 (function () {
