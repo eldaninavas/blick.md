@@ -415,7 +415,6 @@ function renderCalc() {
   const qty = getObras();
   const tiers = TIERED_PRICES[curr];
   const band = tierForQty(qty);
-  const mult = billing === "annual" ? 10 : 1;
 
   const countEl = document.getElementById("calcObrasCount");
   if (countEl) countEl.textContent = qty === 20 ? "20+" : String(qty);
@@ -423,10 +422,14 @@ function renderCalc() {
   const sliderEl = document.getElementById("calcObrasSlider");
   if (sliderEl && Number(sliderEl.value) !== qty) sliderEl.value = String(qty);
 
+  // Band cards always show the MONTHLY per-obra tier rate. Annual savings
+  // surface in the total row (which has the /año period suffix). Multiplying
+  // here made annual mode render "€3,500 por obra" with no period and read
+  // as 10× the real rate.
   [1, 2, 3].forEach((b) => {
     const el = document.querySelector(`[data-band-rate="${b}"]`);
     if (!el) return;
-    const rate = (b === 1 ? tiers.t1 : b === 2 ? tiers.t2 : tiers.t3) * mult;
+    const rate = b === 1 ? tiers.t1 : b === 2 ? tiers.t2 : tiers.t3;
     el.textContent = formatPrice(curr, rate);
   });
 
@@ -434,12 +437,14 @@ function renderCalc() {
     el.classList.toggle("active", Number(el.dataset.band) === band);
   });
 
-  const perObraRate = rateForQty(curr, qty, billing);
-  const total = perObraRate * qty;
+  const monthlyRate = band === 1 ? tiers.t1 : band === 2 ? tiers.t2 : tiers.t3;
+  const total = rateForQty(curr, qty, billing) * qty;
 
+  // Keep the line breakdown in monthly terms so it matches the band cards.
+  // The /año suffix on the total already signals that annual = monthly × 10.
   const lineEl = document.getElementById("calcLineSum");
   if (lineEl) {
-    lineEl.textContent = `${qty === 20 ? "20+" : qty} × ${formatPrice(curr, perObraRate)}`;
+    lineEl.textContent = `${qty === 20 ? "20+" : qty} × ${formatPrice(curr, monthlyRate)}`;
   }
   const totalEl = document.getElementById("calcTotal");
   if (totalEl) totalEl.textContent = formatPrice(curr, total);
